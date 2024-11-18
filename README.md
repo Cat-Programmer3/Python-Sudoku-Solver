@@ -1,6 +1,16 @@
 # Python-Soduku-Solver
 Python Soduku Solver using Yolo v8 Object Detection
 
+# Packages
+The only package it uses is ultralytics
+
+Installation on Linux:
+
+pip install ultralytics
+
+Installation on Windows & Mac:
+Yet to be found
+
 # Usage
 Download Zip & Extract
 
