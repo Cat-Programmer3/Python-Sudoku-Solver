@@ -7,14 +7,14 @@ The only package it uses is ultralytics
 Installation:
 
 Via pip: 
-'''bash
+```bash
 pip install ultralytics
-'''
+```
 
 Via Conda: 
-'''bash
+```bash
 conda install -c conda-forge ultralytics
-'''
+```
 
 
 # Usage
