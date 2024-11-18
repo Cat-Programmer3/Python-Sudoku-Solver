@@ -1,10 +1,10 @@
 # Python-Soduku-Solver
 Python Soduku Solver using [Yolo](https://docs.ultralytics.com/quickstart/) v8 Object Detection
 
-# Packages
-The only package it uses is ultralytics
+## Packages
+Uses Ultralytics & Pytorch
 
-Installation:
+### Ultralytics Installation:
 
 Via pip: 
 ```bash
@@ -15,9 +15,10 @@ Via Conda:
 ```bash
 conda install -c conda-forge ultralytics
 ```
+### Pytorch Installation:
+You will want to follow the instructions on the [Pytorch Website](https://pytorch.org/get-started/locally/) for installation.
 
-
-# Usage
+## Usage
 Download Zip & Extract
 
 Run Solver-1.py with set pretrained yolov8 model for number detection
