@@ -2,7 +2,7 @@ from ultralytics import YOLO
 from ultralytics.utils.plotting import Annotator  # ultralytics.yolo.utils.plotting is deprecated
 
 # Load a model
-model = YOLO("run-2.pt")  # pretrained YOLOv8n model
+model = YOLO("run-2.pt")  # pretrained YOLOv8n model, Name of the model
 
 board = input("Insert File Name Here:")
 
@@ -10,7 +10,7 @@ board = input("Insert File Name Here:")
 results = model(board)  # return a generator of Results objects
 
 
-grid = [[ 0, 2, 0, 0, 0, 0, 0, 9, 0],
+grid = [[ 0, 2, 0, 0, 0, 0, 0, 9, 0], #Predefined Grid
         [ 0, 7, 1, 0, 0, 0, 0, 0, 4],
         [ 0, 8, 0, 0, 0, 0, 0, 0, 1],
         [ 0, 0, 0, 0, 0, 8, 2, 0, 0],
@@ -39,11 +39,7 @@ for r in results:
                 if cb - .05 < y:
                     chb = True
                 if cha == True and chb == True:
-                    ##print("Found")
-                    ##print(model.names[int(r.boxes.cls[z])])
                     grid[b][a] = int(model.names[int(r.boxes.cls[z])])
-                
-                    ##print(grid[a][b])
                     breaker = True
                     break
             if breaker == True:
