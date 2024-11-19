@@ -10,7 +10,7 @@ board = input("Insert File Name Here:")
 results = model(board)  # return a generator of Results objects
 
 
-grid = [[ 0, 2, 0, 0, 0, 0, 0, 9, 0], #Predefined Grid
+grid = [[ 0, 2, 0, 0, 0, 0, 0, 9, 0], #Predefined Grid (Will be replaced by number finding)
         [ 0, 7, 1, 0, 0, 0, 0, 0, 4],
         [ 0, 8, 0, 0, 0, 0, 0, 0, 1],
         [ 0, 0, 0, 0, 0, 8, 2, 0, 0],
@@ -23,14 +23,14 @@ grid = [[ 0, 2, 0, 0, 0, 0, 0, 9, 0], #Predefined Grid
 breaker = False
 
 for r in results:
-    for z in range(0,81):
-        for a in range(9,-1,-1):
-            for b in range(9,-1,-1):
+    for z in range(0,81): #Scroll Through all the Numbers on the board
+        for a in range(9,-1,-1): 
+            for b in range(9,-1,-1): #Boards
                 
-                x = r.boxes.xyxyn[z,0]
-                y = r.boxes.xyxyn[z,1]
+                x = r.boxes.xyxyn[z,0] # X of the Detection
+                y = r.boxes.xyxyn[z,1] # Y of the Detection
                 
-                ca = a/9
+                ca = a/9 # Estimation Based on the Image bounds (Why the image has to be cropped to the board)
                 cb = b/9
                 cha = False
                 chb = False
@@ -68,7 +68,7 @@ def IVM(grid, row, col, number):
 
 
 
-def solve(grid, row, col):
+def solve(grid, row, col): # Start Solving the puzzle
 
     if col == 9:
         if row == 8:
