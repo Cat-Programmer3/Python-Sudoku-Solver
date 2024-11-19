@@ -1,6 +1,9 @@
 # Python-Soduku-Solver
 Python Soduku Solver using [Yolo](https://docs.ultralytics.com/quickstart/) v8 Object Detection
 
+
+Note: I don't have the pre-trained model loaded into GitHub yet but [ultralytics](https://docs.ultralytics.com/quickstart/) shows how you can train it yourself, I will try to add one soon.
+
 ## Packages
 Uses Ultralytics & Pytorch
 
