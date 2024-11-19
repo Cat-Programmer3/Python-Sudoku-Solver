@@ -1,5 +1,5 @@
 # Python-Soduku-Solver
-Python Soduku Solver using [Yolo](https://docs.ultralytics.com/quickstart/) v8 Object Detection
+Python Soduku Solver using [Ultralytics or Yolo](https://docs.ultralytics.com/quickstart/) v8 Object Detection, it uses ultralytics object detection for number recongition then brute forces the puzzle to print a result.
 
 
 ## Packages
