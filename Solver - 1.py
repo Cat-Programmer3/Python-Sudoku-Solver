@@ -2,7 +2,7 @@ from ultralytics import YOLO
 from ultralytics.utils.plotting import Annotator 
 
 # Load a model
-model = YOLO("run-2.pt")  # pretrained YOLOv8n model, Name of the model
+model = YOLO("Pretrained-M.pt")  # pretrained YOLOv8n model, Name of the model
 
 board = input("Insert File Name Here:")
 
