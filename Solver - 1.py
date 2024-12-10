@@ -1,34 +1,36 @@
 from ultralytics import YOLO
-from ultralytics.utils.plotting import Annotator  # ultralytics.yolo.utils.plotting is deprecated
+from ultralytics.utils.plotting import Annotator 
 
 # Load a model
 model = YOLO("run-2.pt")  # pretrained YOLOv8n model, Name of the model
 
 board = input("Insert File Name Here:")
 
-# Run batched inference on a list of images
+# Run inference on the selected image
 results = model(board)  # return a generator of Results objects
 
 
-grid = [[ 0, 2, 0, 0, 0, 0, 0, 9, 0], #Predefined Grid (Will be replaced by number finding)
-        [ 0, 7, 1, 0, 0, 0, 0, 0, 4],
-        [ 0, 8, 0, 0, 0, 0, 0, 0, 1],
-        [ 0, 0, 0, 0, 0, 8, 2, 0, 0],
-        [ 0, 5, 0, 0, 0, 3, 6, 0, 7],
-        [ 2, 0, 0, 7, 0, 9, 0, 0, 0],
-        [ 0, 0, 0, 6, 0, 0, 3, 0, 0],
-        [ 0, 0, 0, 0, 4, 0, 0, 0, 2],
-        [ 5, 0, 4, 1, 0, 0, 0, 0, 0]]
+grid = [[ 0, 0, 0, 0, 0, 0, 0, 0, 0], #Predefined Zeroed Grid 
+        [ 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [ 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [ 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [ 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [ 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [ 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [ 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [ 0, 0, 0, 0, 0, 0, 0, 0, 0]]
 
 breaker = False
 
+# Cropping Algrothim with Board Detection Coming Soon
+
 for r in results:
-    for z in range(0,81): #Scroll Through all the Numbers on the board
+    for z in range(0,81): # Scroll Through all the Numbers on the board
         for a in range(9,-1,-1): 
-            for b in range(9,-1,-1): #Boards
+            for b in range(9,-1,-1): # Brute Force All the Spots where the number can be
                 
-                x = r.boxes.xyxyn[z,0] # X of the Detection
-                y = r.boxes.xyxyn[z,1] # Y of the Detection
+                x = r.boxes.xyxyn[z,0] # X of the Detection (Normalized Value)
+                y = r.boxes.xyxyn[z,1] # Y of the Detection (Normalized Value)
                 
                 ca = a/9 # Estimation Based on the Image bounds (Why the image has to be cropped to the board)
                 cb = b/9
@@ -46,6 +48,8 @@ for r in results:
                 breaker = False
                 break
 
+
+# Solving Algrothim
 
 def IVM(grid, row, col, number):
 
