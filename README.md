@@ -1,5 +1,5 @@
 # Python-Soduku-Solver
-Python Soduku Solver using [Ultralytics or Yolo](https://docs.ultralytics.com/quickstart/) v8 Object Detection, it uses ultralytics object detection for number recongition then brute forces the puzzle to print a result.
+Python Soduku Solver using [Ultralytics or Yolo](https://docs.ultralytics.com/quickstart/) v8 Object Detection, it uses Ultralytics object detection for number recognition then brute forces the puzzle to print a result.
 
 
 ## Packages
@@ -22,8 +22,11 @@ You will want to follow the instructions on the [Pytorch Website](https://pytorc
 ## Usage
 Download Zip & Extract
 
-Run Solver-1.py with set pretrained yolov8 model for number detection
+Run Solver-1.py with set pre-trained yolov8 model for number detection
 
 Enter the file path of the puzzle (Image must be cropped)
 
-Ex. Examples/Test-Puzzle-1.jpeg
+Ex. Examples/Test-Puzzle-1.jpg
+
+## Pretrained Models
+There are different sizes of pre-trained models from s to x. The Smallest one is nano (n) and the largest is xl.
