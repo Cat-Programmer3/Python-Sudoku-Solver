@@ -1,7 +1,6 @@
 # Python-Sudoku-Solver
 Python Sudoku Solver using [Ultralytics or Yolo](https://docs.ultralytics.com/quickstart/) v8 Object Detection, it uses Ultralytics object detection for number recognition then brute forces the puzzle to print a result.
 ## Packages
----
 Uses Ultralytics & Pytorch
 ### Ultralytics Installation:
 Via pip: 
