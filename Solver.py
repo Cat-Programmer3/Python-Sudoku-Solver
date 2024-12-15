@@ -1,7 +1,5 @@
 from ultralytics import YOLO
 from ultralytics.utils.plotting import Annotator 
-import numpy as np
-
 
 # Solving Algrothim
 
