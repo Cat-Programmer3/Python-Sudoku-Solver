@@ -89,7 +89,17 @@ def create_board(bn, orginal_board, model_file):
                         break                
             if do_break:
                 break
-    return orginal_board            
+    return orginal_board   
+
+def print_sol(the_board):
+    if solve(the_board, 0, 0):
+        for i in range(9):
+                for j in range(9):
+                    print(the_board[i][j], end=" ")
+                print()
+    else:
+        print("No Solution")
+
 
 def main():
     grid = [[ 0, 0, 0, 0, 0, 0, 0, 0, 0], #Predefined Zeroed Grid 
@@ -106,15 +116,7 @@ def main():
     board = load_puzzle()
     board_numbers = run_inference(model, board)
     grid = create_board(board_numbers, grid, model)
+    print_sol(grid)
 
-    if solve(grid, 0, 0):
-        for i in range(9):
-                for j in range(9):
-                    print(grid[i][j], end=" ")
-                print()
-    else:
-        print("No Solution")
-
-    
 if __name__ == "__main__":
     main()
