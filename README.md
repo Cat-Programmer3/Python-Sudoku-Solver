@@ -1,5 +1,5 @@
-# Python-Sudoku-Solver
-Python Sudoku Solver using [Ultralytics or Yolo](https://docs.ultralytics.com/quickstart/) v8 Object Detection, it uses Ultralytics object detection for number recognition then brute forces the puzzle to print a result.
+# Python Sudoku Solver
+Python Sudoku Solver using [Yolo](https://docs.ultralytics.com/quickstart/) v8 Object Detection, it uses Ultralytics object detection for number recognition then brute forces the puzzle to print a result.
 ## Packages
 Uses Ultralytics & Pytorch
 ### Ultralytics Installation:
@@ -13,7 +13,7 @@ Via Conda:
 conda install -c conda-forge ultralytics
 ```
 ### Pytorch Installation:
-You will want to follow the instructions on the [Pytorch Website](https://pytorch.org/get-started/locally/) for installation.
+You will want to follow the instructions on the website: [pytorch.org](https://pytorch.org/get-started/locally/) for installation.
 ## Usage
 Download the repository and extract into your directory. Run solver.py in terminal or IDE. Input file path of the (Cropped) image of the Sudoku puzzle; Ex. Examples/Hard-Puzzle-1.jpg
 ## Pretrained Models
