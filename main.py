@@ -1,8 +1,8 @@
 from ultralytics import YOLO ## Ultralytics module for YOLO
 from ultralytics.utils.plotting import Annotator 
 
-from Inference import * ## Import the Functions for the Inference Module
-from Solver import *    ## Import the Functions for the Solver
+from sudoku.Inference import * ## Import the Functions for the Inference Module
+from sudoku.Solver import *    ## Import the Functions for the Solver
 
 def main():
     grid = [[ 0, 0, 0, 0, 0, 0, 0, 0, 0], ## Start with a grid of the correct size
