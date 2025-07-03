@@ -50,7 +50,7 @@ def print_sol(the_board):
     if solve(the_board, 0, 0):
         for i in range(9):
                 for j in range(9):
-                    print(the_board[i][j], end=" ")
+                    print(the_board[j][i], end=" ")
                 print()
     else:
         print("No Solution")
