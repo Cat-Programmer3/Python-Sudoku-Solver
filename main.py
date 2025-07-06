@@ -19,6 +19,10 @@ def main():
     board = load_puzzle() ## Load the puzzle image
     board_numbers = run_inference(model, board) ## Run the detection module for the image to read the current numbers
     grid = create_board(board_numbers, grid, model) ## Convert the inference image to an array
+    for i in range(9):
+                for j in range(9):
+                    print(grid[j][i], end=" ")
+                print()
     print_sol(grid) ## Print_sol runs the solver module and outputs in text
 
 if __name__ == "__main__":

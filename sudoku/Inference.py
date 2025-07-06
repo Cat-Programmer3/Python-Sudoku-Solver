@@ -19,18 +19,18 @@ def create_board(bn, orginal_board, model_file):
                 test_nx = test_x/9
                 test_ny = test_y/9
 
-                if test_nx == 1:
-                    test_nx -= 1/18
-                if test_ny == 1:
-                    test_ny -= 1/18
+##                if test_nx == 1:
+##                    test_nx -= 1/18
+##                if test_ny == 1:
+##                    test_ny -= 1/18
+##                
+##                if test_nx == 0:
+##                    test_nx += 1/18
+##                if test_ny == 0:
+##                    test_ny += 1/18
                 
-                if test_nx == 0:
-                    test_nx += 1/18
-                if test_ny == 0:
-                    test_ny += 1/18
-                
-                if x > test_nx - 1/18 and x < test_nx + 1/18:
-                    if y > test_ny - 1/18 and y < test_ny + 1/18:
+                if x < test_nx + 1/9:
+                    if y < test_ny + 1/9:
                         orginal_board[test_x][test_y] = int(model_file.names[int(bn[0].boxes.cls[nums])])
                         do_break = True
                         break                
